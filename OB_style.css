@@ -1,0 +1,237 @@
+/* general formatting */
+
+body {
+    background-color: #CFF8CF;
+    font-family: Verdana;
+}
+
+h1 {
+    color: #111D48;
+}
+
+h2 {
+  clear: both;
+}
+
+.home-link a:link {
+  text-decoration: none;
+}
+.home-link a:visited {
+  text-decoration: none;
+}
+
+.legacy-link a:link {
+  text-decoration: none;
+}
+
+.legacy-link a:visited {
+  text-decoration: none;
+}
+
+.main{
+    width: 75%;
+    padding: 10px 50px;
+    border-style: outset;
+    border-color: #003333;
+    margin:auto;
+}
+
+.main blockquote {
+  background-color: #FFF090;
+  padding: 10px;
+  font-family: Cambria, Georgia, serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* menu formatting */
+
+.menu a {
+    font-weight: bold;
+    color: #111D48;
+    text-decoration:none;
+}
+
+.menu li {
+    display: inline;
+    padding: 5px 20px 5px 20px;
+}
+
+/* dropdown button from https://www.w3schools.com/css/css_dropdowns.asp */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #CFF8CF;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 5px 20px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+}
+
+/* homepage 'button menu' flexbox container from https://www.w3schools.com/css/css3_flexbox.asp and https://www.w3schools.com/howto/howto_css_image_overlay.asp */
+
+.button-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  flex: 50%;
+  position: relative;
+  width: 50%;
+}
+
+.button-image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.button-middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.button:hover .button-image {
+  opacity: 0.3;
+}
+
+.button:hover .button-middle {
+  opacity: 1;
+}
+
+.button-name {
+  color: #000000;
+  padding: 16px 32px;
+}
+
+/* cover images float left from https://www.w3schools.com/css/css_float.asp */
+
+.cover-art {
+  float: left;
+  margin: 10px;
+}
+
+.book-description {
+  clear: right;
+}
+
+.legacy-network {
+  clear: both;
+}
+
+/* archive photo floats right, caption matches image width from https://stackoverflow.com/questions/30686191/how-to-make-image-caption-width-to-match-image-width */
+/* commenting out because this is a copyrighted image!
+#archive-photo  {
+   display: table;
+   float: right;
+ }
+
+#archive-photo img {
+   max-width: 100%;
+ }
+
+#archive-photo figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+
+.archive-text {
+  clear:both;
+}
+*/
+.Olamina-quote  {
+  float: right;
+  margin-left: 10px;
+}
+
+
+/* footer - page last updated */
+
+#footer{
+    clear:both;
+    margin: auto;
+    text-align: center;
+    font-size: small;
+}
+
+
+/* responsive layout */
+
+@media (max-width: 600px) {
+
+    .main{
+        width: 100%;
+        padding: 0;
+        border-style: none;
+        margin:0;
+        float: none;
+    }
+    .menu{
+        text-align: left;
+    }
+    .menu li {
+        padding: 2px;
+        display: list-item;
+    }
+    h1{
+      text-align: center;
+    }
+
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .button {
+      flex: 100%;
+    }
+
+    .button-middle {
+      opacity: .5;
+    }
+
+    .button-name {
+      color: #000000;
+      background-color: #D5D29F;
+      padding: none;
+    }
+
+    #photo, #archive-photo p {
+      display: block;
+    }
+
+    .archive-text, .book-description {
+      width: 100%;
+      height: auto;
+    }
+
+    }
